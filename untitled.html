@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glabrous Skin</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; text-align: center; }
+    header { background: #4CAF50; color: white; padding: 20px; }
+    nav { margin: 15px; }
+    nav a { margin: 0 10px; text-decoration: none; color: #4CAF50; font-weight: bold; cursor: pointer; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 20px; display: none; }
+    section.active { display: block; }
+    footer { background: #222; color: white; padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Glabrous Skin</h1>
+    <p>Exploring smooth, hairless skin types</p>
+  </header>
+
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('gallery')">Gallery</a>
+    <a onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>This site is dedicated to learning about glabrous skin — the type of skin found on your palms and soles.</p>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Glabrous Skin</h2>
+    <p>Glabrous skin is hairless and thick, commonly found on the palms of the hands and soles of the feet. It contains many sweat glands but no hair follicles.</p>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>Here you can showcase photos or illustrations of glabrous skin areas.</p>
+    <img src="example.jpg" alt="Glabrous skin example" width="300">
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@glabrousskin.com</p>
+    <p>Phone: +123 456 789</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Glabrous Skin</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      // hide all sections
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      // show chosen section
+      document.getElementById(pageId).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
